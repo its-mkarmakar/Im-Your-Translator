@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: linear-gradient(135deg, #E3FDF5 10%, #FFE6FA 100%);
+}
+
+#preloader {
+    background: #fff url(images/Walk.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 70px;
+    margin: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 690px;
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
+}
+
+.container h4 {
+    color: #000;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.wrapper .text-input {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.text-input .to-text {
+    border-radius: 0px;
+    border-left: 1px solid #ccc;
+}
+
+.text-input textarea {
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.text-input textarea::placeholder {
+    color: #b7b6b6;
+}
+
+.controls,
+li,
+.icons,
+.icons i {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    list-style: none;
+    padding: 12px 15px;
+}
+
+.controls .row .icons {
+    width: 38%;
+}
+
+.controls .row .icons i {
+    width: 50px;
+    color: #adadad;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    justify-content: center;
+}
+
+.controls .row.from .icons {
+    padding-right: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.controls .row.to .icons {
+    padding-left: 15px;
+    border-left: 1px solid #ccc;
+}
+
+.controls .row select {
+    color: #333;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: none;
+    padding-left: 5px;
+}
+
+.text-input textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+.controls .row select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.text-input textarea::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 8px;
+}
+
+.controls .row select::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 8px;
+    border-right: 2px solid #ffffff;
+}
+
+.controls .exchange {
+    color: #adadad;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.controls i:active {
+    transform: scale(0.9);
+}
+
+.container button {
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: #000;
+}
+
+.copyright {
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #000;
+
+}
+
+.copyright p {
+    font-size: small;
+}
+
+.copyright a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* -----------------css for small screens--------- */
+nav .fas {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    nav .fas {
+        display: block;
+        font-size: 30px;
+    }
+
+    nav ul {
+        background-image: linear-gradient(135deg, #fdfbfb 10%, #ebedee 100%);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        color: #000;
+    }
+
+    .fas.fa-bars {
+        margin: 35px;
+    }
+
+    .container {
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container h4 {
+        font-size: 30px;
+    }
+
+    .wrapper .text-input {
+        flex-direction: column;
+    }
+
+    .text-input .to-text {
+        border-left: 0px;
+        border-top: 1px solid #ccc;
+    }
+
+    .text-input textarea {
+        height: 200px;
+    }
+
+    .controls .row .icons {
+        display: none;
+    }
+
+    .container button {
+        padding: 13px;
+        font-size: 16px;
+    }
+
+    .controls .row select {
+        font-size: 16px;
+    }
+
+    .controls .exchange {
+        font-size: 14px;
+    }
+
+}
